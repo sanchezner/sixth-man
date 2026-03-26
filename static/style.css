@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Gaegu&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    font-family: 'Ubuntu Mono', sans-serif;
+    box-sizing: border-box;
+}
+
+#container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    z-index: 20;
+    pointer-events: none;
+}
+
+#titling {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 0.1s ease-out;
+}
+
+#titling #title {
+    font-weight: 600;
+    font-size: clamp(4rem, 16vw, 6rem);
+}
+
+#titling #subtitle {
+    font-size: clamp(0, 2.3vw, 2rem);
+}
+
+#titling.fade_out {
+    opacity: 0.15;
+}
+
+#player_inputs {
+    /* position: fixed;
+    bottom: 27rem;
+    left: 0;
+    right: 0; */
+    /* padding: 0.5rem; */
+    width: clamp(29rem, 45vw, 36rem);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: clamp(2rem, 7.5vw, 3rem);
+    pointer-events: all;
+    /* z-index: 20; */
+}
+
+.input {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+input {
+    /* width: clamp(11rem, 13.75vw, 15rem); */
+    /* display: flex; */
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-width: 0.75px;
+    border-radius: 0;
+    outline: none;
+}
+
+.dropdown_item {
+    position: absolute;
+    padding: 0.5rem;
+    border-left: 0.75px solid;
+    border-right: 0.75px solid;
+    border-bottom: 0.75px solid;
+    border-radius: 0;
+    background-color: white;
+    z-index: 20;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#traversal_input {
+    display: flex;
+    flex-direction: column;
+}
+
+#bfs_container, #dfs_container {
+    display: flex;
+    align-items: center;
+}
+
+#graph {
+    /* left: 0;
+    top: 0; */
+    position: fixed;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+.floating_node {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 0.75px solid black;
+    pointer-events: none;
+    z-index: 30;
+    will-change: transform;
+    object-fit: cover;
+    /* animation: pop 0.25s ease-out both; */
+    /* background-color: white; */
+}
+
+#compute {
+    /* position: fixed;
+    bottom: 20rem;
+    left: 0; */
+    /* right: 0; */
+    display: flex;
+    justify-content: center;
+    pointer-events: all;
+    padding: 0.25rem;
+    /* gap: clamp(4rem, 15vw, 6rem); */
+    /* align-self: center; */
+    /* z-index: 20; */
+}
+
+#card_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    pointer-events: all;
+    overflow-x: hidden;
+    max-height: 30rem;
+}
+
+.path_card {
+    /* position: absolute; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 0.75px solid black;
+    /* padding: 12px 18px; */
+    padding: 0.5rem;
+    width: clamp(29rem, 45vw, 36rem);
+    /* max-width: 560px; */
+    animation: pop 0.25s ease-out both;
+}
+
+.card_profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card_pic {
+    width: 80px;
+}
+
+.card_connection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@keyframes pop {
+    0% { transform: scale(0.7); opacity: 0;}
+    70% { transform: scale(1.05);}
+    100% { transform: scale(1); opacity: 1;}
+}
+
+/* #main, #player_inputs, #compute {
+    transition: transform 1s ease;
+} */
+
+/* .player_node {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem ;
+}
+
+.player_node.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.player_node img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 3px solid black;
+} */

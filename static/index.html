@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <svg id="graph"></svg>
+    <div id="container">
+        <div id="titling">
+            <div id="title">sixth man</div>
+            <div id="subtitle">enter two NBA players and discover their connection!</div>
+        </div>
+        
+        <div id="player_inputs">
+            <div class="input">
+                <input type="text" id="player_search_a" autocomplete="off" placeholder="Enter player name...">
+                <div id="search_results_a"></div>
+            </div>
+
+            <form id="traversal_input">
+                <div id="bfs_container">
+                    <input type="radio" id="bfs_option" name="traversal" value="bfs">
+                    <label for="bfs_option">BFS</label>
+                </div>
+                <div id="dfs_container">
+                    <input type="radio" id="dfs_option" name="traversal" value="dfs">
+                    <label for="dfs_option">DFS</label>
+                </div>
+            </form>
+
+            <div class="input">
+                <input type="text" id="player_search_b" autocomplete="off" placeholder="Enter player name...">
+                <div id="search_results_b"></div>
+            </div>
+        </div>
+        
+        <div id="card_container">
+            <!-- <div class="path_card">
+                <div class="profile">
+                    <div class="headshot"></div>
+                    <div class="name"></div>
+                </div>
+                <div class="connection"></div>
+                <div class="profile">
+                    <div class="headshot"></div>
+                    <div class="name"></div>
+                </div>
+            </div> -->
+        </div>
+        
+        <button id="compute">Connect</button>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+    <script type="module" src="/static/app.js"></script>
+</body>
+</html>
