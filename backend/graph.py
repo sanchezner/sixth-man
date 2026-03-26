@@ -126,9 +126,3 @@ class Graph:
                 result.append(int(path[i]))
         
         return result
-
-
-
-# g = Graph.build('data/connections.json')
-# print(g.bfs(1642355, 203518))
-# print(g.dfs(1642355, 203518))
