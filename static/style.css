@@ -182,27 +182,3 @@ input {
     70% { transform: scale(1.05);}
     100% { transform: scale(1); opacity: 1;}
 }
-
-/* #main, #player_inputs, #compute {
-    transition: transform 1s ease;
-} */
-
-/* .player_node {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.4rem ;
-}
-
-.player_node.hidden {
-    opacity: 0;
-    pointer-events: none;
-}
-
-.player_node img {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    border: 3px solid black;
-} */
