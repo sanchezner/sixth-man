@@ -1,4 +1,5 @@
 import json
+import time
 from collections import deque
 
 class Graph:
@@ -40,6 +41,7 @@ class Graph:
         return graph
     
     def bfs(self, start, end):
+        st = time.time()
         q = deque()
         q.appendleft(start)
         visited = {}
@@ -82,9 +84,11 @@ class Graph:
             else: # last node gives player id only
                 result.append(int(path[i]))
         
-        return result
+        et = time.time()
+        return result, et - st
                 
     def dfs(self, start, end): # almost exactly the same as bfs, just lifo
+        st = time.time()
         s = [start]
         visited = {}
         visited[start] = None
@@ -125,4 +129,5 @@ class Graph:
             else:
                 result.append(int(path[i]))
         
-        return result
+        et = time.time()
+        return result, et - st

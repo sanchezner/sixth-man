@@ -277,20 +277,21 @@ button.addEventListener('click', async () => {
     }
     
     const res = await fetch(`/search?start=${playerA.id}&end=${playerB.id}&traversal=${traversal}`);
-    const path = await res.json();
+    const path_json = await res.json();
     
-    console.log(path);
-    
-    displayPath(path);
+    displayPath(path_json);
 })
 
-function displayPath(path) {
+function displayPath(path_json) {
+    const path = path_json[0];
+    const time = path_json[1].toFixed(3);
+
     const playerIds = path.slice(0, -1).map(p => p[0]).concat(path[path.length - 1]);
     const edges = path.slice(0, -1).map(p => ({
         teamId: p[1],
         season: p[2]
     }));
-    const degreeLabel = `${edges.length} degree(s) of separation.`
+    const degreeLabel = `${edges.length} degree(s) of separation. (${time}s)`
     let cards = degreeLabel;
     edges.forEach((edge, i) => {
         console.log(i)
