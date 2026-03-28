@@ -38,7 +38,7 @@ Player, team, and career data are sourced from [nba_api](https://github.com/swar
 
 When it's time to compute, the app runs either BFS or DFS depending on input over an adjacency list to find a path between the two selected players. Each edge/connection in the result carries the shared team and season, which the frontend uses to render the cards.
 
-Extraneous team details like historical names and logos were sourced from [this repository](https://github.com/djblechn-su/nba-player-team-ids/blob/master/NBA_Team_IDs.csv) and [sportslogohistory](https://sportlogohistory.com/nba-logo-history) respectively.
+Extraneous team details like historical names and logos were sourced from [this repository](https://github.com/djblechn-su/nba-player-team-ids/blob/master/NBA_Team_IDs.csv) and [sportslogohistory](https://sportslogohistory.com/nba-logo-history) respectively.
 
 ## Tech Stack
 - FastAPI, Uvicorn for backend/hosting
