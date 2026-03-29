@@ -311,7 +311,7 @@ function displayPath(path_json) {
         const teamName = getTeamName(team, season);
         
         cards += `
-        <div class="path_card" style="animation-delay: ${i * 0.08}s">
+        <div class="path_card" style="animation-delay: ${i * 0.03}s">
         <div class="card_profile">
         <img class="card_pic" src="${getHeadshot(id1)}"/>
         <span class="card_profile_name">${name1}</span>
